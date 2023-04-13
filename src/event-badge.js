@@ -39,48 +39,21 @@ class EventBadge extends LitElement {
         transform: rotate(360deg);
       }
     }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
-    }
   `;
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.header = 'HAX the Web: Headless Authoring eXperience';
   }
 
   render() {
     return html`
       <main>
+        <div class="image"><img alt="open-wc logo" src=${logo} /></div>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.header}</h1>
 
-        <p>Edit <code>src/EventBadge.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
       </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
     `;
   }
 }
