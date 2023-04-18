@@ -57,8 +57,16 @@ class EventBadge extends LitElement {
       <svg width="1150" height="1500" id="remix-this" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 1500" data-v-b2c8125e="" data-v-a09c7bce="">
         <defs data-v-b2c8125e="" data-v-a09c7bce="">
           <style data-v-b2c8125e="" data-v-a09c7bce="">
+            @font-face {
+              font-family: 'Robo  to';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kvnz.woff2) format('woff2');
+            }
         
       </style>
+      </defs>
+      </svg>
     `;
   }
 }
