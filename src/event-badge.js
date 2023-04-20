@@ -57,6 +57,10 @@ class EventBadge extends LitElement {
       font-weight: bold;
       margin-top: 10px;
     }
+    
+    .wrapper:hover .first-line-para {
+      color: red;
+    }
 
     @keyframes app-logo-spin {
       from {
@@ -83,8 +87,7 @@ class EventBadge extends LitElement {
 
         <div style="width:100%;height:100%;display:flex">
         <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" 
-        style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%">Bryan Mathers</div>
-        <div>asdsadsadad</div>
+        style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%">Type Stuff</div>
         </div>
         
 
