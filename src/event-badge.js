@@ -33,7 +33,7 @@ class EventBadge extends LitElement {
 
     .TV {
       width: 50vh;
-      height: 50vh;
+      height: 55vh;
       background-color: white;
       position: flex;
       border: 1px solid black;
@@ -56,10 +56,6 @@ class EventBadge extends LitElement {
       font-size: 50px;
       font-weight: bold;
       margin-top: 10px;
-    }
-    
-    .wrapper:hover .first-line-para {
-      color: red;
     }
 
     @keyframes app-logo-spin {
@@ -84,12 +80,10 @@ class EventBadge extends LitElement {
         <div class="TV">
         <h1>${this.title}</h1>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-
         <div style="width:100%;height:100%;display:flex">
         <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" 
-        style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%">Type Stuff</div>
+        style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:50%;height:23%">Type Stuff<br>More Stuff<br>Other Stuff</div>
         </div>
-        
 
       </main>
       <div>
