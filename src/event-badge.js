@@ -4,7 +4,6 @@ const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class EventBadge extends LitElement {
   static properties = {
-    header: { type: String },
     title: { type: String },
     image: { type: String },
   }
@@ -17,7 +16,6 @@ class EventBadge extends LitElement {
       align-items: center;
       justify-content: flex-start;
       font-size: calc(10px + 2vmin);
-      color: #1a2b42;
       max-width: 960px;
       margin: 0 auto;
       text-align: center;
@@ -33,6 +31,33 @@ class EventBadge extends LitElement {
       animation: app-logo-spin infinite 20s linear;
     }
 
+    .TV {
+      width: 50vh;
+      height: 50vh;
+      background-color: white;
+      position: flex;
+      border: 1px solid black;
+      border-radius: 10px;
+      border-shadow: 10px 10px 5px grey;
+    }
+
+    title {
+      color: white;
+      position: flex;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    first-line-para {
+      color: black;
+      position: flex;
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
     @keyframes app-logo-spin {
       from {
         transform: rotate(0deg);
@@ -45,25 +70,30 @@ class EventBadge extends LitElement {
 
   constructor() {
     super();
-    this.header = 'HAX the Web: Headless Authoring eXperience';
     this.title = 'Media';
     this.image = 'https://www.bing.com/images/blob?bcid=SDnwGs.Os34FpQ';
   }
 
   render() {
     return html`
-      <main>\
-        <h2>${this.header}</h2>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
+      <main>
+        <div class="TV">
         <h1>${this.title}</h1>
+        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
+
+        <div style="width:100%;height:100%;display:flex">
+        <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" 
+        style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%">Bryan Mathers</div>
+        <div>asdsadsadad</div>
+        </div>
+        
 
       </main>
       <div>
       <svg width="1150" height="1500" id="outerSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1150 1500" class="img-fluid" style="vertical-align:top;overflow:visible;max-height:70vh;" data-v-b2c8125e data-v-a09c7bce>
         <defs data-v-b2c8125e="" data-v-a09c7bce="">
           <style data-v-b2c8125e="" data-v-a09c7bce="">
-            
-            <image href="${this.image}" x="0" y="0" height="100%" width="100%" />
+
 
       </style>
       </defs>
