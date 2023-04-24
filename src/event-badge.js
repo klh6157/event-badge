@@ -6,9 +6,14 @@ class EventBadge extends LitElement {
   static properties = {
     title: { type: String },
     image: { type: String },
+    sepia: { type: Boolean, Reflect: true },
+
   }
 
   static styles = css`
+    :host([sepia]) {
+      filter: sepia(100%);
+    }
     :host {
       min-height: 100vh;
       display: flex;
@@ -72,11 +77,11 @@ class EventBadge extends LitElement {
     super();
     this.title = 'Media';
     this.image = 'https://www.bing.com/images/blob?bcid=SDnwGs.Os34FpQ';
+    
   }
 
   render() {
     return html`
-      <main>
         <div class="TV">
         <h1>${this.title}</h1>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
@@ -85,16 +90,8 @@ class EventBadge extends LitElement {
         style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:50%;height:23%">Type Stuff<br>More Stuff<br>Other Stuff</div>
         </div>
 
-      </main>
-      <div>
-      <svg width="1150" height="1500" id="outerSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1150 1500" class="img-fluid" style="vertical-align:top;overflow:visible;max-height:70vh;" data-v-b2c8125e data-v-a09c7bce>
-        <defs data-v-b2c8125e="" data-v-a09c7bce="">
-          <style data-v-b2c8125e="" data-v-a09c7bce="">
-
-
-      </style>
-      </defs>
-      </svg>
+      <div class="wrapper">
+        
       </div>
     `;
   }
