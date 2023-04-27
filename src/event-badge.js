@@ -36,7 +36,7 @@ class EventBadge extends LitElement {
       animation: app-logo-spin infinite 20s linear;
     }
 
-    .TV {
+    .wrapper {
       width: 50vh;
       height: 55vh;
       background-color: white;
@@ -53,6 +53,14 @@ class EventBadge extends LitElement {
       font-weight: bold;
       text-align: center;
       margin-top: 10px;
+    }
+
+    .domain {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      animation: app-logo-spin infinite 20s linear;
     }
 
     first-line-para {
@@ -82,16 +90,24 @@ class EventBadge extends LitElement {
 
   render() {
     return html`
-        <div class="TV">
-        <h1>${this.title}</h1>
+        <div class="wrapper">
+        <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" style="white-space:pre-wrap;text-align:center;border:0px solid #000000;padding-top:5px;width:100%;font-size:100px">Media</div>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <div style="width:100%;height:100%;display:flex">
         <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" 
         style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:50%;height:23%">Type Stuff<br>More Stuff<br>Other Stuff</div>
         </div>
 
-      <div class="wrapper">
-        
+        <div class="domain"><img alt="open-wc logo" src=${logo} /></div>
+
+        <svg width="1150" height="1500" id="outerSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1150 1500" class="img-fluid" style="vertical-align:top;overflow:visible;max-height:70vh;" data-v-b2c8125e data-v-a09c7bce>
+          @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+          }
+      </svg>
       </div>
     `;
   }
