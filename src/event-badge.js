@@ -63,53 +63,13 @@ class EventBadge extends LitElement {
       display: block;
     }
 
-    :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--event-badge-background-color);
-    }
-
-    /* main {
-      flex-grow: 1;
-    } */
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    /* .TV {
-      width: 50vh;
-      height: 55vh;
-      background-color: white;
-      position: flex;
-      border: 1px solid black;
-      border-radius: 10px;
-      border-shadow: 10px 10px 5px grey;
-    }
-
-    title {
-      color: white;
-      position: flex;
-      font-size: 50px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .domain {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 3;
-      animation: app-logo-spin infinite 20s linear;
+    #outerSVG {
+      display: block;
+      width: 1140px;
+      margin-left: -270px;
+      margin-top: -350px;
+      margin-bottom: -350px;
+      transform: scale(0.5);
     }
 
     first-line-para {
@@ -118,7 +78,7 @@ class EventBadge extends LitElement {
       font-size: 50px;
       font-weight: bold;
       margin-top: 10px;
-    } */
+    }
 
     @keyframes app-logo-spin {
       from {
@@ -165,6 +125,11 @@ class EventBadge extends LitElement {
   render() {
     return svg`
         <div class="wrapper">
+        <foreignObject x="106" y="1100" width="660" height="300" style="line-height:1.2em;font-size:40px;fill:#3b3b3b;font-family:'Bryso Letter Gothic Bold';color:${this.fontcolor};">
+              <div style="width:100%;height:100%;display:flex;">
+                <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%;"></div>
+              </div>
+            </foreignObject>
         <svg width="1150" height="1500" id="outerSVG" xmlns="http://www.w3.org/2000/svg">
           <svg width="1150" height="1500" id="innerSVG" xmlns="http://www.w3.org/2000/svg">
 
@@ -221,7 +186,10 @@ class EventBadge extends LitElement {
           </g>
 
           <g>
-            <foreignObject x="40" y="51" width="1070" height="265" style="line-height:1em;font-size:230px;font-family:'Monument Extended Ultrabold';letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;"><div style="width:100%;height:100%;display:flex;"><div xmlns="http://www.w3.org/1999/xhtml" contenteditable="false" style="white-space:pre-wrap;text-align:center;border:0px solid #000000;padding-top:5px;width:100%;">${this.media}</div></div>
+            <foreignObject x="40" y="51" width="1070" height="265" style="line-height:1em;font-size:230px;font-family:'Monument Extended Ultrabold';letter-spacing:0.04em;text-transform:uppercase;color:#ffffff;">
+            <div style="width:100%;height:100%;display:flex;">
+            <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="false" style="white-space:pre-wrap;text-align:center;border:0px solid #000000;padding-top:5px;width:100%;">${this.media}</div>
+            </div>
             </foreignObject>
           </g>
 
@@ -325,7 +293,7 @@ class EventBadge extends LitElement {
           <g>
             <foreignObject x="106" y="1100" width="660" height="300" style="line-height:1.2em;font-size:40px;fill:#3b3b3b;font-family:'Bryso Letter Gothic Bold';color:${this.fontcolor};">
               <div style="width:100%;height:100%;display:flex;">
-                <div xmlns="http://www.w3.org/1999/xhtml" class="first-line-para" style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%;">${this.name}<br>${this.line2}<br>${this.line3}</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" contenteditable="true" class="first-line-para" style="white-space:pre-wrap;text-align:left;border:0px solid #000000;padding-top:5px;width:100%;">${this.name}<br>${this.line}<br>${this.line2}</div>
               </div>
             </foreignObject>
           </g>
